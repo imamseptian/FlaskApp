@@ -100,11 +100,11 @@ class Ratings(db.Model):
      
 @app.route('/')
 def Index():
-    return "Hellow Flask Application"
-    # all_data = Users.query.all()
+    #return "Hellow Flask Application"
+     all_data = Users.query.all()
 
 
-    # return render_template("index.html",user_data=all_data)
+     return render_template("index.html",user_data=all_data)
 
 
 @app.route('/convert_food')
