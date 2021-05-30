@@ -210,8 +210,9 @@ def editrating():
             food_id = request.form['food_id']
             food_code = request.form['food_code']
             rating = request.form['rating']
+            my_data = Ratings.query.get(request.form.get('id'))
             if(int(request.form['rating'])<=5 and int(request.form['rating'])>0):
-                my_data = Ratings.query.get(request.form.get('id'))
+                
                 my_data.rating = request.form['rating']
 
                 db.session.commit()
