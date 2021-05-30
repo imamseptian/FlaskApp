@@ -15,7 +15,8 @@
     
     <div class="container">
        <div class="m-100">
-           <h2>{{ user_data.name }}</h2>
+            <a href="/">Go To Home</a>
+           <h3>{{ user_data.name }}</h3>
        </div>
         <div class="row">
             <div class="col md-12">
@@ -33,8 +34,9 @@
                             <table id="tabel_food" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>Food Code</th>
+                                        
                                         <th>Food</th>
+                                        <!-- <th>Food Code</th> -->
                                         <th>Category</th>
                                         <th>Type</th>
                                         
@@ -43,9 +45,10 @@
                                 <tbody>
                                     {% for row in food_data %}
                                     <tr>
-                                        <td>{{row.food_code}}</td>
+                                        
                                         <!-- <td>{{row.name}}</td> -->
                                         <td><a href="/rate/{{row.id}}" data-toggle="modal" data-target="#modalrate{{row.id}}">{{row.name}}</a></td>
+                                        <!-- <td>{{row.food_code}}</td> -->
                                         <td>{{row.category}}</td>
                                         <td>{{row.type}}</td>
                                         
@@ -93,7 +96,7 @@
 
                                                       <div class="row mb-3">
                                                         <div class="col-sm">
-                                                        Your Rating (1-5)
+                                                          Your Rating (1-5),<strong>Other than this will not be recorded</strong> 
                                                         </div>
                                                         <div class="col-sm">
                                                             <input type="hidden" name="user_id" value="{{user_data.id}}">
@@ -128,8 +131,9 @@
                             <table id="tabel_rating" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>Food_code</th>
+                                        
                                         <th>Food</th>
+                                        <!-- <th>Food_code</th> -->
                                         <th>Category</th>
                                         <th>Type</th>
                                         <th>Rating</th>
@@ -140,8 +144,9 @@
                                 <tbody>
                                     {% for rating,food in rating_data %}
                                     <tr>
-                                        <td>{{food.food_code}}</td>
+                                        
                                         <td><a href="" data-toggle="modal" data-target="#modaldetailrate{{rating.id}}">{{food.name}}</a></td>
+                                        <!-- <td>{{food.food_code}}</td> -->
                                         <td>{{food.category}}</td>
                                         <td>{{food.type}}</td>
                                         <td>{{rating.rating}}</td>
@@ -215,7 +220,7 @@
 
                                                       <div class="row mb-3">
                                                         <div class="col-sm">
-                                                        Your Rating (1-5)
+                                                          Your Rating (1-5),<strong>Other than this will not be recorded</strong>
                                                         </div>
                                                         <div class="col-sm">
                                                             <input type="hidden" name="id" value="{{rating.id}}">

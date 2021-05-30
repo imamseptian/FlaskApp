@@ -39,7 +39,7 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Username</th>
-                            <th>Email</th>
+                            <th>Rated Food</th>
                             <th>Action</th>
                           </tr>
                       </thead>
@@ -49,7 +49,7 @@
                             <td>{{row.id}}</td>
                             <td><a href="/userfood/{{row.id}}">{{row.name}}</a></td>
                             <td>{{row.username}}</td>
-                            <td>{{row.email}}</td>
+                            <td>{{row.rating_count}}</td>
                             <td>
                                 <a href="/update/{{row.id}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.id}}">Edit</a>
                                 <a href="/delete/{{row.id}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete?')">Delete</a>
