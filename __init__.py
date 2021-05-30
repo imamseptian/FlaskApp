@@ -23,9 +23,9 @@ INSTANCE_NAME = "groovy-analyst-314808:asia-southeast1:collectrating"
 
 # configuration
 app.config["SECRET_KEY"] = "xxxxxxx"
-# app.config["SQLALCHEMY_DATABASE_URI"]= f"mysql+pymysql://{USERNAME}:{PASSWORD}@{PUBLIC_IP_ADDRESS}/{DBNAME}"
+app.config["SQLALCHEMY_DATABASE_URI"]= f"mysql+pymysql://{USERNAME}:{PASSWORD}@{PUBLIC_IP_ADDRESS}/{DBNAME}"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@localhost/rating_db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@localhost/rating_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db = SQLAlchemy(app)
