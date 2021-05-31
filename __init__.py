@@ -123,9 +123,9 @@ def convert_food():
 @app.route('/', methods=['POST'])
 def insert():
     if request.method == "POST":
-        username = 'username72'
+        username = 'alolo'
         name = request.form['name']
-        email = 'username72@ayohealthy.id'
+        email = 'alolo@ayohealthy.id'
         password = 'qwerty123'
 
         my_data = Users(username, name, email, password)
